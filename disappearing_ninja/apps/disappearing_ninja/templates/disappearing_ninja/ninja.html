@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Disappearing Ninjas</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% load staticfiles %}
+    <!-- The line above tells Django to be ready to listen for static files -->
+    <link rel="stylesheet" href="{% static '/ninjas/css/style.css' %}" media="screen" title="no title" charset="utf-8">
+</head>
+<body>
+    <h1>You found the ninjas!</h1>
+    <img src="{% static image %}" alt="ninja here">
+    <h3>Get a closer look at the ninjas!</h3>
+    <a href="{% url 'ninja'%}">Group Photo!</a>
+    <a href="{% url 'ninja_color' color='red' %}">Raphael</a>
+    <a href="{% url 'ninja_color' color='purple' %}">Donatello</a>
+    <a href="{% url 'ninja_color' color='orange' %}">Michelangelo</a>
+    <a href="{% url 'ninja_color' color='blue' %}">Leonardo</a>
+    <a href="{% url 'ninja_color' color='xD' %}">Fifth...Ninja?</a>
+</body>
+</html>
